@@ -6,12 +6,18 @@ const router = express.Router();
 // Define Your API Routes Here
 /* ************************************************************************* */
 
-// Define item-related routes
-import itemActions from "./modules/item/itemActions";
+// Define category-related routes
+import categoryActions from "./modules/category/categoryActions";
 
-router.get("/api/items", itemActions.browse);
-router.get("/api/items/:id", itemActions.read);
-router.post("/api/items", itemActions.add);
+router.get("/api/category", categoryActions.browse);
+router.get("/api/category/:id", categoryActions.read);
+/* ************************************************************************* */
+
+// Define legoset-related routes
+import legosetActions from "./modules/legoset/legosetActions";
+
+router.get("/api/legoset/:categoryId", legosetActions.browse);
+router.get("/api/legoset/:id", legosetActions.read);
 
 /* ************************************************************************* */
 
