@@ -1,4 +1,35 @@
 .category-card {
-  width: 30%;
-  border: red 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+  background-color: var(--couleur-noir);
+  margin: 2rem;
+  padding: 1rem;
+  color: white;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px 2px #000000;
+}
+
+.category-card:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.card-name {
+  font-family: "poppins", sans-serif;
+  font-size: 1.3rem;
+  background-color: var(--couleur-jaune);
+  color: var(--couleur-noir);
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  font-family: "roboto", sans-serif;
+  text-align: center;
 }

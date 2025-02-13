@@ -14,9 +14,12 @@ function HomePage() {
 
   return (
     <>
+    <main className="main-container">
+
+
       <img className="logo-img" src="./public/logo.png" alt="LegoDex Logo" />
       <h1 className="homepage-title">Le Pokédex des sets Lego !</h1>
-      <p className="homepage-text">Choisis ton univers préféré :</p>
+      <h2 className="homepage-text">Choisis ton univers préféré :</h2>
       <section className="category-container">
         {categories.length > 0 ? (
           categories.map((category) => (
@@ -26,6 +29,7 @@ function HomePage() {
           <p>Chargement des catégories...</p>
         )}
       </section>
+      </main>
     </>
   );
 }

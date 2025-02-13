@@ -32,19 +32,19 @@ function LegoSetList() {
   return (
     <>
       <Navbar />
-      <article>
+      <section>
         {uniqueLegoSets.length > 0 ? (
           uniqueLegoSets.map((legoSet) => (
-            <div key={legoSet?.id}>
+            <article key={legoSet?.id}>
               <h3>{legoSet?.name}</h3>
               <p>{legoSet?.description}</p>
               <img src={legoSet?.img_src} alt={legoSet?.name} />
-            </div>
+            </article>
           ))
         ) : (
           <p>Chargement des sets LEGO...</p>
         )}
-      </article>
+      </section>
     </>
   );
 }

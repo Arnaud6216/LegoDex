@@ -23,8 +23,8 @@ const Category = ({ category }: CategoryComponentProps) => {
         }
       }}
     >
-      <h2>{category.name}</h2>
-      <p>{category.description}</p>
+      <h2 className="card-name">{category.name}</h2>
+      <p className="card-text">{category.description}</p>
     </article>
   );
 };
