@@ -165,3 +165,17 @@
   font-family: "Roboto", serif;
   color: var(--couleur-noir);
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .legoset-container {
+    justify-content: center;
+  }
+
+  .legoset-card {
+    width: 70%;
+  }
+  .popup-content {
+    min-width: 320px;
+    max-width: 480px;
+  }
+}

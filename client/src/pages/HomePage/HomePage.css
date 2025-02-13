@@ -41,3 +41,9 @@
   text-align: center;
   padding: 2rem;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .homepage-title {
+    font-size: 1.3rem;
+  }
+}
