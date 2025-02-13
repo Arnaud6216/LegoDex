@@ -10,6 +10,68 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 50%;
   height: 80%;
+  background-color: var(--couleur-noir);
+  border-radius: 1rem;
+}
+
+.add-title {
+  font-family: "montserrat", sans-serif;
+  background-color: var(--couleur-jaune);
+  color: var(--couleur-noir);
+  width: 80%;
+  font-size: 2rem;
+  margin: 2rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.name-label,
+.number-label,
+.number-label,
+.piece-label,
+.description-label,
+.img-label {
+  color: white;
+}
+
+input {
+  margin-bottom: 2rem;
+  width: 60%;
+  height: 2rem;
+}
+
+.button-container {
+  display: flex;
+}
+
+.form-button-ok {
+  font-family: "poppins", sans-serif;
+  font-weight: bold;
+  color: var(--couleur-noir);
+  background-color: var(--couleur-jaune);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 0.8rem;
+}
+
+.form-button-cancel {
+  font-family: "poppins", sans-serif;
+  font-weight: bold;
+  color: var(--couleur-noir);
+  background-color: var(--couleur-rouge);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 0.8rem;
+}
+
+.form-button-ok:hover,
+.form-button-cancel:hover {
+  filter: brightness(1.2);
 }

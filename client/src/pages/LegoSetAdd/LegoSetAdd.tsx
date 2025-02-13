@@ -63,7 +63,7 @@ function LegoSetAdd() {
               });
           }}
         >
-          <h1>Ajouter un set</h1>
+          <h1 className="add-title">Ajouter un set</h1>
 
           <label className="name-label" htmlFor="name">
             Nom du set
@@ -90,13 +90,18 @@ function LegoSetAdd() {
           </label>
           <input id="img_src" type="text" />
 
-          <button type="submit">Valider</button>
-          <button
-            type="button"
-            onClick={() => navigate(`/legoset/${actualCategoryId}`)}
-          >
-            Annuler
-          </button>
+          <div className="button-container">
+            <button className="form-button-ok" type="submit">
+              Valider
+            </button>
+            <button
+              className="form-button-cancel"
+              type="button"
+              onClick={() => navigate(`/legoset/${actualCategoryId}`)}
+            >
+              Annuler
+            </button>
+          </div>
         </form>
       </main>
     </>

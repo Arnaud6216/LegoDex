@@ -13,6 +13,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  height: 100vh;
+  background: url("../../../public/lego.jpg");
 }
 
 .category-container:hover {
@@ -32,6 +34,10 @@
 }
 
 .homepage-text {
-  font-weight: 300;
-  color: white;
+  font-weight: bold;
+  color: black;
+  background-color: var(--couleur-jaune);
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
 }

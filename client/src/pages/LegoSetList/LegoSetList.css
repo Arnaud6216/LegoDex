@@ -15,7 +15,7 @@
   margin: 2rem;
   padding: 1rem;
   color: white;
-  height: 450px;
+  height: 400px;
   border-radius: 1rem;
   box-shadow: 5px 5px 10px 2px #000000;
 }
@@ -35,7 +35,7 @@
   margin: 2rem;
   padding: 1rem;
   color: white;
-  height: 450px;
+  height: 400px;
   border-radius: 1rem;
   box-shadow: 5px 5px 10px 2px #000000;
 }
@@ -51,6 +51,7 @@
   border-radius: 1rem;
   max-width: 200px;
   max-height: 200px;
+  min-height: 160px;
 }
 
 .legoset-name {
@@ -64,12 +65,6 @@
   text-align: center;
 }
 
-.legoset-description {
-  overflow: scroll;
-  margin-bottom: 1rem;
-  min-height: 3rem;
-}
-
 .legoset-button {
   font-family: "poppins", sans-serif;
   font-weight: bold;
@@ -81,6 +76,10 @@
   cursor: pointer;
 }
 
+.legoset-button:hover {
+  filter: brightness(1.2);
+}
+
 .legoset-button-delete {
   font-family: "poppins", sans-serif;
   font-weight: bold;
@@ -90,4 +89,79 @@
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+.legoset-button-delete:hover {
+  filter: brightness(1.2);
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+  min-width: 420px;
+  text-align: center;
+  position: relative;
+}
+
+.popup-img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.popup-content button {
+  margin-top: 15px;
+  padding: 10px;
+  background: var(--couleur-jaune);
+  color: var(--couleur-noir);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.popup-content button:hover {
+  background: rgb(139, 126, 0);
+}
+
+.popup-name {
+  font-family: "poppins", sans-serif;
+  background-color: var(--couleur-jaune);
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.popup-number,
+.popup-pieces {
+  font-family: "Roboto", serif;
+  color: var(--couleur-noir);
+}
+
+.popup-pieces {
+  margin-bottom: 1rem;
+}
+
+.popup-description {
+  font-family: "Roboto", serif;
+  color: var(--couleur-noir);
 }
