@@ -26,9 +26,9 @@ Avant de commencer, assurez-vous d'avoir installé ces outils sur votre machine 
 
 Étapes d'installation 📝
 
-    Clonez le projet 📥
+Clonez le projet 📥
 
-git clone https://github.com/votre-utilisateur/lego-dex.git
+    git clone https://github.com/votre-utilisateur/lego-dex.git
 
 
 Installez les dépendances 📦
