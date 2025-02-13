@@ -1,7 +1,8 @@
 create table category (
   id int unsigned primary key auto_increment not null,
   name varchar(50) not null unique,
-  description text not null
+  description text not null,
+  img_src varchar(255) not null
 );
 
 create table legoset (
@@ -15,11 +16,11 @@ create table legoset (
   foreign key(category_id) references category(id)
 );
 
-insert into category(id, name, description)
+insert into category(id, name, description, img_src)
 values
-  (1, "Star Wars", "Découvrez des sets LEGO inspirés de l'univers Star Wars, avec des vaisseaux iconiques et des personnages légendaires, pour revivre les moments épiques de la saga."),
-  (2, "Harry Potter", "Explorez le monde magique de Harry Potter avec des sets LEGO qui vous permettent de reconstruire Poudlard et de vivre les aventures des sorciers."),
-  (3, "Marvel", "Plongez dans l'univers Marvel avec des sets LEGO des Avengers, Spider-Man et autres héros, pour recréer des scènes d'action spectaculaires.");
+  (1, "Star Wars", "Découvrez des sets LEGO inspirés de l'univers Star Wars, avec des vaisseaux iconiques et des personnages légendaires, pour revivre les moments épiques de la saga.", "./public/starwars.gif"),
+  (2, "Harry Potter", "Explorez le monde magique de Harry Potter avec des sets LEGO qui vous permettent de reconstruire Poudlard et de vivre les aventures des sorciers.", "./public/harrypotter.gif"),
+  (3, "Marvel", "Plongez dans l'univers Marvel avec des sets LEGO des Avengers, Spider-Man et autres héros, pour recréer des scènes d'action spectaculaires.", "./public/marvel.gif");
 
 insert into legoset(id, name, set_number, number_of_pieces, description, img_src, category_id)
 values

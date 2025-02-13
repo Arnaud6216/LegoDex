@@ -1,29 +1,40 @@
 import "./LegoSetList.css";
 import { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import { Context } from "../../services/Context";
 import type { LegoSetProps } from "../../types/vite-env";
 
 function LegoSetList() {
+  const navigate = useNavigate();
   const context = useContext(Context);
 
   if (!context) {
     throw new Error("LegoSetList must be used within a Provider");
   }
 
-  const { legoSets } = context;
+  const { setActualCategoryId } = context;
   const { id } = useParams();
-  const [filteredLegoSets, setFilteredLegoSets] = useState<LegoSetProps[]>([]);
+
+  useEffect(() => {
+    setActualCategoryId(id ? Number(id) : null);
+  }, [id, setActualCategoryId]);
+
+  const [filteredLegoSets, setLegoSets] = useState<LegoSetProps[]>([]);
 
   useEffect(() => {
     if (id) {
-      const filtered = legoSets.filter(
-        (legoSet) => legoSet.category_id === Number.parseInt(id),
-      );
-      setFilteredLegoSets(filtered);
+      fetch(`${import.meta.env.VITE_API_URL}/api/legoset/${id}`)
+        .then((response) => response.json())
+        .then((data) => {
+          setLegoSets(data); // Met à jour l'état global avec les nouveaux sets
+        })
+        .catch((error) =>
+          console.error("Erreur de récupération des legosets", error),
+        );
     }
-  }, [id, legoSets]);
+  }, [id]); // 🟢 Recharge les données si la catégorie change
 
   const uniqueLegoSets = Array.from(
     new Set(filteredLegoSets.map((legoSet) => legoSet.id)),
@@ -51,7 +62,15 @@ function LegoSetList() {
         ) : (
           <p>Chargement des sets LEGO...</p>
         )}
-        <article className="legoset-card-add">
+        <article
+          className="legoset-card-add"
+          onClick={() => navigate("/legoset/add")}
+          onKeyUp={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              navigate("/legoset/add");
+            }
+          }}
+        >
           <h3 className="legoset-name">Ajouter un set</h3>
         </article>
       </section>

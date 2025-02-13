@@ -49,6 +49,8 @@
   background-color: white;
   padding: 1rem;
   border-radius: 1rem;
+  max-width: 250px;
+  max-height: 250px;
 }
 
 .legoset-name {

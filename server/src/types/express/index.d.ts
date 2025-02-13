@@ -17,6 +17,7 @@ type CategoryProps = {
   id: number;
   name: string;
   description: string;
+  img_src: string;
 }[];
 
 type LegosetProps = {
@@ -27,4 +28,4 @@ type LegosetProps = {
   description: string;
   img_src: string;
   category_id: number;
-}[];
+};
