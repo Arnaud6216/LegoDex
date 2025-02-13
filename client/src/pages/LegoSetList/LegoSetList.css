@@ -1,0 +1,79 @@
+.legoset-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.legoset-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+  min-width: 250px;
+  background-color: var(--couleur-noir);
+  margin: 2rem;
+  padding: 1rem;
+  color: white;
+  height: 400px;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px 2px #000000;
+}
+.legoset-card:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.legoset-card-add {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+  min-width: 250px;
+  background-color: var(--couleur-noir);
+  margin: 2rem;
+  padding: 1rem;
+  color: white;
+  height: 400px;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px 2px #000000;
+}
+
+.legoset-card-add:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+.legoset-img {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.legoset-name {
+  font-family: "poppins", sans-serif;
+  font-size: 1.1rem;
+  background-color: var(--couleur-jaune);
+  color: var(--couleur-noir);
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.legoset-description {
+  overflow: scroll;
+  margin-bottom: 1rem;
+}
+
+.legoset-button {
+  font-family: "poppins", sans-serif;
+  font-weight: bold;
+  color: var(--couleur-noir);
+  background-color: var(--couleur-jaune);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}

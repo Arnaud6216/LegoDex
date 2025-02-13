@@ -6,6 +6,7 @@ export type CategoryProps = {
   id: number;
   name: string;
   description: string;
+  img_src: string;
 };
 
 export type LegoSetProps = {

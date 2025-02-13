@@ -32,18 +32,28 @@ function LegoSetList() {
   return (
     <>
       <Navbar />
-      <section>
+      <section className="legoset-container">
         {uniqueLegoSets.length > 0 ? (
           uniqueLegoSets.map((legoSet) => (
-            <article key={legoSet?.id}>
-              <h3>{legoSet?.name}</h3>
-              <p>{legoSet?.description}</p>
-              <img src={legoSet?.img_src} alt={legoSet?.name} />
+            <article className="legoset-card" key={legoSet?.id}>
+              <h3 className="legoset-name">{legoSet?.name}</h3>
+              <p className="legoset-description">{legoSet?.description}</p>
+              <img
+                className="legoset-img"
+                src={legoSet?.img_src}
+                alt={legoSet?.name}
+              />
+              <button className="legoset-button" type="button">
+                Plus
+              </button>
             </article>
           ))
         ) : (
           <p>Chargement des sets LEGO...</p>
         )}
+        <article className="legoset-card-add">
+          <h3 className="legoset-name">Ajouter un set</h3>
+        </article>
       </section>
     </>
   );
