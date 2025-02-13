@@ -35,15 +35,15 @@ Installez les dépendances 📦
 
 Une fois que vous avez cloné le projet, allez dans le dossier du projet et installez toutes les dépendances avec :
 
-cd LegoDex
-npm install
+    cd LegoDex
+    npm install
 
-Dupliquez les fichiers .env.sample dans les dossiers client et server, puis renommez les en .env .
-Modifiez les variables d'environnements avec vos informations.
+    Dupliquez les fichiers .env.sample dans les dossiers client et server, puis renommez les en .env .
+    Modifiez les variables d'environnements avec vos informations.
 
 
 Démarrer le serveur 🚀
 
 Pour lancer à la fois le serveur frontend (React) et backend (Node.js), utilisez la commande suivante :
 
-npm run dev
+    npm run dev
