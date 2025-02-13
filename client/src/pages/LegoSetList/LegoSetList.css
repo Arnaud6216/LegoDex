@@ -15,7 +15,7 @@
   margin: 2rem;
   padding: 1rem;
   color: white;
-  height: 400px;
+  height: 450px;
   border-radius: 1rem;
   box-shadow: 5px 5px 10px 2px #000000;
 }
@@ -35,7 +35,7 @@
   margin: 2rem;
   padding: 1rem;
   color: white;
-  height: 400px;
+  height: 450px;
   border-radius: 1rem;
   box-shadow: 5px 5px 10px 2px #000000;
 }
@@ -49,8 +49,8 @@
   background-color: white;
   padding: 1rem;
   border-radius: 1rem;
-  max-width: 250px;
-  max-height: 250px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .legoset-name {
@@ -67,6 +67,7 @@
 .legoset-description {
   overflow: scroll;
   margin-bottom: 1rem;
+  min-height: 3rem;
 }
 
 .legoset-button {
@@ -74,6 +75,17 @@
   font-weight: bold;
   color: var(--couleur-noir);
   background-color: var(--couleur-jaune);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.legoset-button-delete {
+  font-family: "poppins", sans-serif;
+  font-weight: bold;
+  color: var(--couleur-noir);
+  background-color: var(--couleur-rouge);
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.5rem;

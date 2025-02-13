@@ -17,8 +17,9 @@ router.get("/api/category/:id", categoryActions.read);
 import legosetActions from "./modules/legoset/legosetActions";
 
 router.get("/api/legoset/:categoryId", legosetActions.browse);
-router.get("/api/legoset/:id", legosetActions.read);
+router.get("/api/legoset/set/:id", legosetActions.read);
 router.post("/api/legoset/add", legosetActions.add);
+router.delete("/api/legoset/set/:id", legosetActions.destroy);
 
 /* ************************************************************************* */
 

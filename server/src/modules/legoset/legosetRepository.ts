@@ -35,6 +35,15 @@ class LegosetRepository {
     );
     return result.insertId;
   }
+
+  async delete(id: number) {
+    const [result] = await databaseClient.query<Result>(
+      "delete from legoset where id = ?",
+      [id],
+    );
+
+    return result.affectedRows;
+  }
 }
 
 export default new LegosetRepository();

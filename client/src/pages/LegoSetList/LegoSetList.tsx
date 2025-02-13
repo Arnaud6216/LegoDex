@@ -28,17 +28,33 @@ function LegoSetList() {
       fetch(`${import.meta.env.VITE_API_URL}/api/legoset/${id}`)
         .then((response) => response.json())
         .then((data) => {
-          setLegoSets(data); // Met à jour l'état global avec les nouveaux sets
+          setLegoSets(data);
         })
         .catch((error) =>
           console.error("Erreur de récupération des legosets", error),
         );
     }
-  }, [id]); // 🟢 Recharge les données si la catégorie change
+  }, [id]);
 
   const uniqueLegoSets = Array.from(
     new Set(filteredLegoSets.map((legoSet) => legoSet.id)),
   ).map((id) => filteredLegoSets.find((legoSet) => legoSet.id === id));
+
+  const handleDelete = (legoSetId: number) => {
+    fetch(`${import.meta.env.VITE_API_URL}/api/legoset/set/${legoSetId}`, {
+      method: "DELETE",
+    })
+      .then((response) => {
+        if (response.ok) {
+          setLegoSets((prevLegoSets) =>
+            prevLegoSets.filter((legoSet) => legoSet.id !== legoSetId),
+          );
+        } else {
+          console.error("Erreur lors de la suppression du set");
+        }
+      })
+      .catch((error) => console.error("Erreur lors de la suppression", error));
+  };
 
   return (
     <>
@@ -56,6 +72,15 @@ function LegoSetList() {
               />
               <button className="legoset-button" type="button">
                 Plus
+              </button>
+              <button
+                className="legoset-button-delete"
+                type="button"
+                onClick={() =>
+                  legoSet?.id !== undefined && handleDelete(legoSet.id)
+                }
+              >
+                Supprimer
               </button>
             </article>
           ))
