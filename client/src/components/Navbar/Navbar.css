@@ -1,0 +1,49 @@
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--couleur-rouge);
+  padding: 1rem;
+}
+
+.nav-category-name {
+  font-family: "montserrat", sans-serif;
+  color: white;
+  font-size: 1.7rem;
+  border: 4px dashed var(--couleur-jaune);
+  padding: 0.5rem;
+}
+
+.nav-button {
+  font-family: "poppins", sans-serif;
+  font-weight: bold;
+  color: var(--couleur-noir);
+  background-color: var(--couleur-jaune);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  filter: brightness(1.2);
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .navbar-container {
+    flex-direction: column;
+  }
+  .logo-img {
+    width: 200px;
+    height: 50px;
+  }
+
+  .nav-category-name {
+    font-size: 1.2rem;
+    margin: 1rem;
+  }
+
+  .nav-button {
+    padding: 0.3rem 0.7rem;
+  }
+}

@@ -1,0 +1,49 @@
+.main-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--couleur-rouge);
+  overflow: scroll;
+}
+
+.category-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
+  background: url("../../../public/lego.jpg");
+}
+
+.category-container:hover {
+  cursor: pointer;
+}
+.logo-img {
+  width: 350px;
+  height: 100px;
+}
+
+.homepage-title {
+  margin: 2rem;
+  font-family: "montserrat", sans-serif;
+  color: white;
+  border: dashed 4px var(--couleur-jaune);
+  padding: 1rem;
+}
+
+.homepage-text {
+  font-weight: bold;
+  color: black;
+  background-color: var(--couleur-jaune);
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .homepage-title {
+    font-size: 1.3rem;
+  }
+}
