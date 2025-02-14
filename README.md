@@ -44,6 +44,10 @@ Une fois que vous avez cloné le projet, allez dans le dossier du projet et inst
 
 Démarrer le serveur 🚀
 
+Initialiser la base de données :
+
+    npm run db:migrate
+    
 Pour lancer à la fois le serveur frontend (React) et backend (Node.js), utilisez la commande suivante :
 
     npm run dev
